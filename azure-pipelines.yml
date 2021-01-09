@@ -31,6 +31,9 @@ steps:
 #     buildForSimulator: true
 #     packageApp: false
 
+- task: CmdLine@2
+  inputs:
+    script: 'pwd'
 - task: SynopsysPolaris@1
   inputs:
     polarisService: 'DEMO'
