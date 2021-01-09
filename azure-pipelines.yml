@@ -24,9 +24,14 @@ steps:
   inputs:
     restoreSolution: '**/*.sln'
 
-- task: XamariniOS@2
+# - task: XamariniOS@2
+#   inputs:
+#     solutionFile: '**/*.sln'
+#     configuration: 'Release'
+#     buildForSimulator: true
+#     packageApp: false
+
+- task: SynopsysPolaris@1
   inputs:
-    solutionFile: '**/*.sln'
-    configuration: 'Release'
-    buildForSimulator: true
-    packageApp: false
+    polarisService: 'DEMO'
+    polarisCommand: 'analyze -w --coverity-ignore-capture-failure'
