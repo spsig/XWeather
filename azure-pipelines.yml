@@ -33,7 +33,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'pwd'
+    script: 'cd XWeather/iOS'
 - task: SynopsysPolaris@1
   inputs:
     polarisService: 'DEMO'
