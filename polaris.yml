@@ -8,11 +8,11 @@ project:
 capture:
   build:
     cleanCommands:
-    - shell: [msbuild, /Users/runner/work/1/s/XWeather/iOS/XWeather.iOS.csproj, '/t:Clean']
-    - shell: [msbuild, /Users/runner/work/1/s/XWeather/iOS/XWeather.iOS.sln, '/t:Clean']
+    - shell: [msbuild, XWeather.iOS.csproj, '/t:Clean']
+    - shell: [msbuild, XWeather.iOS.sln, '/t:Clean']
     buildCommands:
-    - shell: [msbuild, /Users/runner/work/1/s/XWeather/iOS/XWeather.iOS.csproj, '/t:Build', '/p:Configuration=Release', '/p:Platform=iPhone', '/p:ArchiveOnBuild=True']
-    - shell: [msbuild, /Users/runner/work/1/s/XWeather/iOS/XWeather.iOS.sln, '/t:Build', '/p:Configuration=Release', '/p:Platform=iPhone', '/p:ArchiveOnBuild=True']
+    - shell: [msbuild, XWeather.iOS.csproj, '/t:Build']
+    - shell: [msbuild, XWeather.iOS.sln, '/t:Build']
   fileSystem:
     ears:
       extensions: [ear]
